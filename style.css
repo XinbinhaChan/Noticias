@@ -79,6 +79,10 @@ header .mobile a{
     line-height: 1.5rem;
 }
 
+header .desktop{
+    display: none;
+}
+
 main{
     max-width: 1110px;
     margin-inline: auto;
@@ -146,6 +150,11 @@ main{
     margin-bottom: 0.5rem;
 }
 
+.terceira-seção a{
+    text-decoration: none;
+
+}
+
 .segunda-seção p{
     color: var(--silver);
     font-size: 0.9375rem;
@@ -184,6 +193,26 @@ main{
 }
 
 @media(min-width: 1110px){
+    header>button{
+        display: none;
+    }
+
+    header .desktop {
+        display: flex;
+        gap: 2rem;
+    }
+
+    header .desktop a{
+        text-decoration: none;
+        color: var(--gunmetal);
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+    }
+
+    header .desktop a:hover{
+        color: var(--vermillion);
+    }
+
     main{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -209,23 +238,22 @@ main{
         font-size: 3.5rem;
     }
 
+    .primeira-seção button:hover{
+        background: var(--dark-blue);
+        cursor: pointer;
+    }
+
     .segunda-seção h2{
         font-size: 2.5rem;
     }
 
-    header>button{
-        display: none;
-    }
-
-    header .desktop {
+    .terceira-seção{
         display: flex;
-        gap: 2rem;
+        grid-column: 1/4;
     }
 
-    header .desktop a{
-        text-decoration: none;
-        color: var(--gunmetal);
-        font-size: 0.9375rem;
-        line-height: 1.625rem;
+    .terceira-seção h2:hover{
+        color: var(--vermillion);
     }
+
 }
